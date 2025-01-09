@@ -7,3 +7,4 @@ Required:
   -> Python 3.10
   -> gradio(For the UI)
   
+Create a venv (prefered to avoid collision with the existing projects)
