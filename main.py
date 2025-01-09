@@ -9,8 +9,8 @@ if not os.path.exists("outputs"):
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
-def gen_audio(text):
-    tts = TTS(model_name='tts_models/en/ljspeech/fast_pitch').to(device)
+def gen_audio():
+    tts = TTS(model_name='tts_models/en/ljspeech/fast_pitch').to(device) # change the model if required (In cmd "tts --list_models" to view available model)
     tts.tts_to_file(text=text, file_path="outputs/output.wav")
     return "outputs/output.wav"  # Ensure the correct path is returned
 
